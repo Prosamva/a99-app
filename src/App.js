@@ -7,8 +7,8 @@ import NewPropertyForm from "./NewPropertyForm";
 import RequestCityForm from "./RequestCity";
 import DisplayProperty from "./DisplayProperty";
 
-// const serverUrl = "https://fswi-99acres-clone.herokuapp.com/";
-const serverUrl = "http://localhost:3001/";
+const serverUrl = "https://fswi-99acres-clone.herokuapp.com/";
+// const serverUrl = "http://localhost:3001/";
 
 function App() {
   const [cities, setCities] = useState([]);
