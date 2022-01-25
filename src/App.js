@@ -31,7 +31,6 @@ function App() {
       .catch((error) =>
         alert("Something went wrong while trying to fetch cities! " + error)
       );
-    console.log('Reached cities!')
   };
   const getProperties = () => {
     axios
@@ -51,13 +50,14 @@ function App() {
     let formObject = Object.fromEntries(formData.entries());
     axios
       .post(serverUrl + "cities", formObject)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        console.log(res.data);
+        getCities();
+      })
       .catch((error) =>
         alert("Something went wrong while submitting your request! " + error)
       );
     removePopup();
-    getCities();
-    getProperties();
   };
 
   const handleNewPropertyForm = (event) => {
@@ -65,7 +65,10 @@ function App() {
     event.preventDefault();
     axios
       .post(serverUrl + "properties", formData)
-      .then((res) => console.log(res.data))
+      .then((res) => {
+        console.log(res.data);
+        getProperties();
+      })
       .catch((error) =>
         alert(
           "Something went wrong while submitting your property details! " +
@@ -73,8 +76,6 @@ function App() {
         )
       );
     removePopup();
-    getCities();
-    getProperties();
   };
 
   const handlePropertyClick = (data) => {

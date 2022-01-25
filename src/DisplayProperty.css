@@ -15,7 +15,8 @@
 }
 
 .property-display img{
-    object-fit: contain;
+    object-fit: cover;
+    min-width: 100px;
     background-repeat: no-repeat;
     max-width: 480px;
     border-radius: 8px;
