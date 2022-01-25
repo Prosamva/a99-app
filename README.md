@@ -6,3 +6,8 @@ This 99acres clone app is made using React. This project is specific to individu
 
 Visit the website deployed on netlify [here](https://99acres-clone-prosamva.netlify.app/).<br>
 Visit 99acres original website [here](https://www.99acres.com/).
+
+##### Screenshot
+![Landing Page](screenshots/1.png)<br>
+![Property View](screenshots/2.png)<br>
+![Property View (Mobile)](screenshots/3.png)<br>
